@@ -50,6 +50,30 @@ Swagger UI disponible en:
 
 👉 http://localhost:8080/swagger-ui/index.html
 
+🗄️ Base de Datos – H2 (In-Memory)
+
+Este proyecto utiliza una base de datos H2 en memoria (in-memory) para almacenar los resultados del análisis de ADN.
+
+🔍 Acceso al H2 Console
+
+Una vez ejecutada la aplicación (local o en Docker):
+
+👉 http://localhost:8080/h2-console
+
+Usar estos valores:
+
+Campo	Valor
+JDBC URL	jdbc:h2:mem:mutantesdb
+User	sa
+Password	(vacío)
+
+📌 IMPORTANTE: Si la levantaste por Docker, asegurate de ejecutar:
+
+docker run -p 8080:8080 mutantes-app
+
+
+o no levantará la consola.
+
 🧬 Endpoints de la API
 ✔ POST /mutant
 
