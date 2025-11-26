@@ -24,44 +24,11 @@ Incluye:
 
 ✔ Diagramas UML de secuencia
 
-📁 Estructura del Proyecto
-
-src/main/java/ar/edu/utn/frm/mutantes/
-│
-├── config/
-│   └── SwaggerConfig.java
-│
-├── controller/
-│   └── MutantController.java
-│
-├── dto/
-│   ├── DnaRequest.java
-│   ├── StatsResponse.java
-│   └── ErrorResponse.java
-│
-├── entity/
-│   └── DnaRecord.java
-│
-├── exception/
-│   ├── GlobalExceptionHandler.java
-│   └── DnaHashCalculationException.java
-│
-├── repository/
-│   └── DnaRecordRepository.java
-│
-├── service/
-│   ├── MutantDetector.java
-│   ├── MutantService.java
-│   └── StatsService.java
-│
-└── validation/
-    ├── ValidDnaSequence.java
-    └── ValidDnaSequenceValidator.java
 
   🚀 Cómo Ejecutar el Proyecto
+  
 ▶ 1. Ejecutar con Spring Boot
 ./gradlew bootRun
-
 
 La API corre en:
 👉 http://localhost:8080
@@ -73,7 +40,6 @@ Construir la imagen:
 ./gradlew clean build -x test
 docker build -t mutantes-app .
 
-
 Levantar el contenedor:
 
 docker run -p 8080:8080 mutantes-app
@@ -83,18 +49,6 @@ docker run -p 8080:8080 mutantes-app
 Swagger UI disponible en:
 
 👉 http://localhost:8080/swagger-ui/index.html
-
-Incluye:
-
-POST /mutant
-
-GET /stats
-
-Códigos de error
-
-Modelos de request/response
-
-📸 Captura recomendada (agregar en el repo si querés)
 
 🧬 Endpoints de la API
 ✔ POST /mutant
@@ -136,7 +90,6 @@ Ejemplo de hash almacenado:
 
 54d9bdcb9879e883ec1bc15b61d757d154ba695477b17b13021e353194cd2b22
 
-
 Esto mejora la performance, evita reprocesamiento y respeta seguridad de datos.
 
 ✔ Validaciones Custom (ConstraintValidator)
@@ -154,9 +107,7 @@ Longitud mínima > 0
 ⚠️ Manejo Global de Excepciones
 
 Centralizado en:
-
 GlobalExceptionHandler.java
-
 
 Ejemplo de error:
 
@@ -175,11 +126,8 @@ StatsService	StatsServiceTest.java
 Controlador REST	MutantControllerTest.java
 
 Los tests usan:
-
 Mockito
-
 MockMvc
-
 JUnit 5
 
 📊 Cobertura de Código (JaCoCo)
@@ -189,7 +137,6 @@ Generar reporte:
 ./gradlew clean test
 ./gradlew jacocoTestReport
 
-
 Abrir el reporte:
 
 👉 build/reports/jacoco/test/html/index.html
@@ -197,36 +144,17 @@ Abrir el reporte:
 ✔ Coverage Global > 80%
 ✔ Servicios y controlador cubiertos
 
-📸 Agregar captura en el repo si querés
-
-📐 Diagramas de Secuencia (UML)
-
-Incluidos en el PDF entregado y en este repositorio.
-
-🔹 POST /mutant
-
-🔹 GET /stats
-
 🛠 Tecnologías Utilizadas
 
 Java 21
-
 Spring Boot 3.4
-
 H2 Database
-
 JPA / Hibernate
-
 Mockito
-
 JUnit 5
-
 Swagger / OpenAPI
-
 Docker
-
 JaCoCo
-
 Lombok
 
 📦 Cómo Clonar y Probar
