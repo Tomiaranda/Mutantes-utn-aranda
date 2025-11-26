@@ -158,14 +158,19 @@ JaCoCo
 Lombok
 
 📦 Cómo Clonar y Probar
+
 git clone https://github.com/Tomiaranda/Mutantes-utn-aranda.git
+
 cd Mutantes-utn-aranda
+
 ./gradlew bootRun
 
 👤 Autor
 
 Tomás Aranda
+
 Legajo:50766
+
 📧 arandatomi10@gmail.com
 
 🐙 GitHub: https://github.com/Tomiaranda
